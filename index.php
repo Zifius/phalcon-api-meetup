@@ -8,6 +8,8 @@ $app = new Micro();
 $app->get('/api/frameworks', function() {
 
     $response = new Response();
+    $response->setContentType('application/json');
+
     $data = [
         ['name' => 'Zend', 'version' => '2.4.8'],
         ['name' => 'Symfony', 'version' => '2.7.5'],

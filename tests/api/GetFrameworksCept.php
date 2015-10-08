@@ -8,6 +8,7 @@ $I->sendGET('/api/frameworks');
 
 $I->seeResponseCodeIs(200);
 $I->dontSeeResponseCodeIs(500);
+$I->canSeeHttpHeader('Content-Type', 'application/json');
 $I->seeResponseIsJson();
 
 $I->seeResponseContainsJson(['name' => 'Phalcon', 'version' => '2.0.8']);
